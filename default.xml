@@ -44,8 +44,10 @@
   </project>
 
   <project path="vendor/mediatek/kernel_modules" name="vendor_mediatek_kernel_modules" revision="sixteen" remote="mt6878" />
-  
-  <project path="build/bazel_mgk_rules" name="kernel-build-bazel_mgk_rules" revision="sixten" remote="mt6878">
+  <project path="motorola/kernel/modules" name="motorola_kernel_modules" revision="sixteen" remote="mt6878" />
+
+
+  <project path="build/bazel_mgk_rules" name="kernel-build-bazel_mgk_rules" revision="sixteen" remote="mt6878">
     <linkfile src="BUILD.bazel" dest="BUILD" />
     <linkfile src="kleaf/bazel.WORKSPACE" dest="WORKSPACE" />
   </project>
