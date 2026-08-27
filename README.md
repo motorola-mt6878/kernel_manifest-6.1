@@ -1,4 +1,4 @@
-duchamp kernel building
+nice kernel building
 ===========
 
 Getting started
@@ -12,7 +12,7 @@ repo init -u https://android.googlesource.com/kernel/manifest.git -b common-andr
 ```
 Then use a command like this to clone the local manifest at the root of your local repository:
 ```
-git clone https://github.com/mt6897-devs/kernel_manifest .repo/local_manifests
+git clone https://github.com/motorola-mt6878/kernel_manifest-6.1.git .repo/local_manifests
 ```
 Then to sync up:
 ```
@@ -23,7 +23,7 @@ Building the kernel
 -------------------
 To build the GKI kernel image and the device kernel modules, use a command like this at the root of your local repository:
 ```
-./kernel_device_modules-6.1/build.sh
+DEFCONFIG_OVERLAYS=ext_config/moto-mgk_64_k61-nice.config MODE=user ./kernel_device_modules-6.1/build.sh
 ```
 Then every built artifacts are available at:
 ```
@@ -32,4 +32,4 @@ out/dist/
 
 Updating the prebuilt kernel repository
 ---------------------------------------
-To update the [prebuilt kernel repository](https://github.com/mt6897-devs/device_xiaomi_duchamp-kernel), use the [copy script](https://gist.github.com/rio004/cd128f3c187dfa42f4f27f7f4fd385aa) in prebuilt kernel repository and find any missing files manually if needed.
+To update the [prebuilt kernel repository](https://github.com/motorola-mt6878/device_motorola_nice-kernel.git), use the [copy script](https://gist.github.com/rio004/cd128f3c187dfa42f4f27f7f4fd385aa) in prebuilt kernel repository and find any missing files manually if needed.
