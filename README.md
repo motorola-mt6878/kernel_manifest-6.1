@@ -32,4 +32,8 @@ out/dist/
 
 Updating the prebuilt kernel repository
 ---------------------------------------
-To update the [prebuilt kernel repository](https://github.com/motorola-mt6878/device_motorola_nice-kernel.git), use the [copy script](https://gist.github.com/rio004/cd128f3c187dfa42f4f27f7f4fd385aa) in prebuilt kernel repository and find any missing files manually if needed.
+To update the [prebuilt kernel repository](https://github.com/motorola-mt6878/device_motorola_nice-kernel.git), use the copy script after building:
+```
+./kernel_device_modules-6.1/copy_kernel.sh /path/to/device_motorola_nice-kernel
+```
+The script copies modules listed in `modules.load.*` files and extra vendor modules from `out/dist/` into the correct subdirectories (`vendor/`, `ramdisk/`, `system/`), strips debug symbols, and copies `Image.gz`.
